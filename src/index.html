@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Card</title>
+  </head>
+  <body>
+    <header class="fixed-top">
+      <header-section></header-section>
+    </header>
+    <main>
+      <div class="modal fade" id="loginSignupModal" tabindex="-1" role="dialog" aria-labelledby="loginSignupModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginSignupModalLabel">Login / Signup</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="collapse show">
+                    <form id="login-form" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="email-login">Email address</label>
+                            <input type="email" class="form-control" id="email-login" aria-describedby="emailNotes" placeholder="Enter email" required>
+                            <div class="invalid-feedback">Please fill out this field with correct format email. — e.g., john@mail.com</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password-login">Password</label>
+                            <input type="password" class="form-control" id="password-login" placeholder="Password" minlength="6" required>
+                            <div class="invalid-feedback">Please fill out this field. (minimum 6 chars)</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                <div class="collapse">
+                    <form id="signup-form" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="email-signup">Email address</label>
+                            <input type="email" class="form-control" id="email-signup" aria-describedby="emailNotes" placeholder="Enter email" required>
+                            <small id="emailNotes" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <div class="invalid-feedback">Please fill out this field with correct format email. — e.g., john@mail.com</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name-signup">Name</label>
+                            <input type="text" class="form-control" id="name-signup" placeholder="Enter name" required>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password-signup">Password</label>
+                            <input type="password" class="form-control" id="password-signup" placeholder="Password" minlength="6" required>
+                            <div class="invalid-feedback">Please fill out this field. (minimum 6 chars)</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Signup</button>
+                    </form>
+                </div>
+                <p class="pt-2">Don't have an account ? <a href="#" id="switchingForm">Click here</a></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="input-group col-md-6 mx-auto mb-3">
+        <input type="text" class="form-control" id="search-input" placeholder="Character's name" aria-label="Character's name" aria-describedby="search-name">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" id="btn-search" type="button">Search</button>
+        </div>
+      </div>
+      <div class="text-center pt-3" id="title-card">
+        <h4>All Cards</h4>
+      </div>
+      <pokemon-deck></pokemon-deck>
+      <paging-card></paging-card>
+    </main>
+  </body>
+</html>
